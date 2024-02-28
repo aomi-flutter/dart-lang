@@ -1,7 +1,4 @@
-
-
-
-extension ListJoinExtension<T> on List<T> {
+extension ListExtension<T> on List<T> {
 
   List<T> joinWith(T separator) {
     if (isEmpty) {
@@ -16,6 +13,11 @@ extension ListJoinExtension<T> on List<T> {
       }
     }
     return result;
+  }
+
+  ///
+  T getOrDefault(int index, T defaultValue) {
+    return index < this.length ? this[index] : defaultValue;
   }
 
 }
